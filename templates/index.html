@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV Data Extractor</title>
+    <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid #ddd;
+        }
+      </style>
+</head>
+<body>
+    <h1><center>CV Data Extractor</center></h1>
+    <div id="div1" class="container">
+        <h3>Upload a zip file containing the CVs data</h3>
+        
+        <div class="container">
+        <center><form action="" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" name="submit" onclick="hideDiv1()">
+        </form></center></div>
+
+    </div>
+    <div id="div2" class="container" style="display: none;">
+        <center><h2>Extracting Data from Uploaded CVs.</h2>
+        <h3>Please wait...</h3>
+        <h3>File will be automatically downloaded.</h3>
+        <a href="/"><button>Home Page</button></a></center>
+      </div>    
+      <script>
+        function hideDiv1() {
+          document.getElementById("div1").style.display = "none";
+          document.getElementById("div2").style.display = "block";
+        }
+      </script>
+</body>
