@@ -1,13 +1,12 @@
+import os
 from flask import Flask, render_template, request, send_file
-import os
 from pyzipper import AESZipFile
-app = Flask(__name__)
-import os
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask, flash, request, redirect
 from werkzeug.utils import secure_filename
-
 from errorSolving import main
 
+
+app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads\\tmp'
 ALLOWED_EXTENSIONS = {'zip', 'pdf','docx'}
 
@@ -66,5 +65,5 @@ if __name__ == '__main__':
         os.mkdir("uploads\\tmp")
     except Exception:
         pass
-    app.secret_key = "ndjzesuryksjuyh794hf9o47y8thrf4i9oyujhfry7489o5ywouejhfr9487y5hrwR$^%$T%$6$%^4gf3544i97ryhu49o8yhe4teg54"
+    app.secret_key = "Your secret key"
     app.run(debug=True)
